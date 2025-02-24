@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>لعبة XO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>لعبة XO</h1>
+        
+        <!-- إحصائيات بسيطة -->
+        <div class="stats">
+            <div class="score-board">
+                <div class="player-stats">
+                    <span>اللاعب X</span>
+                    <span class="score" id="score-x">0</span>
+                </div>
+                <div class="player-stats">
+                    <span>اللاعب O</span>
+                    <span class="score" id="score-o">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mode-select">
+            <button class="mode-btn active" data-mode="friend">اللعب مع صديق</button>
+            <button class="mode-btn" data-mode="ai">اللعب ضد الكمبيوتر</button>
+            <div class="ai-buttons">
+                <button class="mode-btn" data-mode="ai" data-difficulty="easy">سهل</button>
+                <button class="mode-btn" data-mode="ai" data-difficulty="medium">متوسط</button>
+                <button class="mode-btn" data-mode="ai" data-difficulty="hard">صعب</button>
+            </div>
+        </div>
+
+        <div class="status">دور اللاعب: <span id="current-player">X</span></div>
+        
+        <div id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <button id="restart">إعادة اللعب</button>
+    </div>
+
+    <!-- إزالة عناصر الصوت القديمة لأننا نستخدم JavaScript للتحميل -->
+    <script src="script.js"></script>
+</body>
+</html>
